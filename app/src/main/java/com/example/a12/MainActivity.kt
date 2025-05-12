@@ -332,9 +332,10 @@ fun Produst() {
             .verticalScroll(scrollState)
             .padding(10.dp)
     ) {
-        /*Row {
+        //египед
+        Row {
             Image(
-                painter = painterResource(id = R.drawable.turkey),
+                painter = painterResource(id = R.drawable.egiped),
                 contentDescription = null,
                 contentScale = ContentScale.FillBounds,
                 modifier = Modifier.padding(top = 100.dp, bottom = 10.dp)
@@ -343,7 +344,7 @@ fun Produst() {
 
         Row{
             Image(
-                painter = painterResource(id = R.drawable.tyrkey_flag),
+                painter = painterResource(id = R.drawable.egiped_flag),
                 contentDescription = null,
                 contentScale = ContentScale.FillBounds,
                 modifier = Modifier.padding(top = 10.dp, bottom = 10.dp).size(75.dp,50.dp)
@@ -360,19 +361,42 @@ fun Produst() {
                     modifier = Modifier.padding(10.dp)
                 )
             }
-        }*/
+        }
         if (hostel.value){
             Hostel()
         }
-
+//туркей
         Row {
             Image(
-                painter = painterResource(id = R.drawable.picture1),
+                painter = painterResource(id = R.drawable.turkey),
                 contentDescription = null,
                 contentScale = ContentScale.FillBounds,
-                modifier = Modifier
-                    .padding(top = 10.dp, bottom = 10.dp)
+                modifier = Modifier.padding(top = 10.dp, bottom = 10.dp)
             )
+        }
+
+        Row{
+            Image(
+                painter = painterResource(id = R.drawable.tyekey_flag),
+                contentDescription = null,
+                contentScale = ContentScale.FillBounds,
+                modifier = Modifier.padding(top = 10.dp, bottom = 10.dp).size(75.dp,50.dp)
+            )
+            IconToggleButton(
+                checked = hostel.value,
+                onCheckedChange = { hostel.value = it },
+                modifier = Modifier.size(140.dp, 50.dp)
+            ) {
+                Text(
+                    "отели",
+                    color = Color(0xFFFFFFFF),
+                    fontSize = 25.sp,
+                    modifier = Modifier.padding(10.dp)
+                )
+            }
+        }
+        if (hostel.value){
+            Hostel()
         }
         Row {
             Image(
