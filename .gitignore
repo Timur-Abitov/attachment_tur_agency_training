@@ -1,0 +1,37 @@
+# Built application files
+*.apk
+*.apks
+*.dex
+
+# Files for the ART/Dalvik VM
+*.o
+*.class
+
+# Android Studio generated files
+.gradle/
+/build
+
+# Local configuration files (e.g., keystore files)
+*.keystore
+local.properties
+
+# Gradle cache
+.gradle
+
+# Intellij related files
+.idea/
+*.iml
+
+# DS_Store files (macOS)
+.DS_Store
+
+#NDK files
+*.so
+
+# Caches
+*/.externalNativeBuild
+.externalNativeBuild
+
+# Other
+/captures
+crashlytics.properties 
